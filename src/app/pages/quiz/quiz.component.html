@@ -1,0 +1,24 @@
+<div class="col-lg-8 qu-quiz mx-auto mt-5">
+  <div class="card text-white bg-blue-light mb-3">
+    <h2 class="card-header qu-quizTitle">{{ quiz.name }}</h2>
+    <div class="card-body" *ngFor="let question of questionsFiltered; let i = index">
+      <h3 class="card-title qu-quizTitle">{{ question.category }}</h3>
+      <p class="card-text">{{ question.question }}</p>
+      <div class="custom-control custom-radio question-item" *ngFor="let answer of question.answers; let j = index">
+        <input type="checkbox" id="customRadio{{questionPage}}{{j}}" class="custom-control-input" (change)="selectAnswer(question, answer)" [(ngModel)]="answer.selected">
+        <label class="custom-control-label pointer" for="customRadio{{questionPage}}{{j}}">{{ answer.name }}</label>
+      </div>
+    </div>
+    <div class="card-footer">
+      <small class="text-white float-right">Pregunta {{ questionPage + 1 }} de {{ quiz.questions.length }}</small>
+      <div class="float-left">
+        <button class="btn btn-success" [disabled]="questionPage == 0" (click)="goTo(-1)">Anterior</button>
+          &nbsp;
+        <button class="btn btn-success" (click)="goTo(1)">Siguiente</button>
+      </div>
+    </div>
+  </div>
+  <div class="float-right">
+    <strong>Tiempo:</strong> {{ time }}
+  </div>
+</div>

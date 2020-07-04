@@ -1,7 +1,10 @@
+import { Answer } from './answer';
+
 export class Question {
-  category: string;
-  type: boolean;
-  difficulty: string;
-  question: string;
-  correct_Answer: string;
+    id: number;
+    quizId: number;
+    category: string;
+    question: string;
+    questionTypeId: number;
+    answers: Answer[];
 }

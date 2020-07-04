@@ -1,0 +1,11 @@
+<div class="row mt-5">
+  <div class="col-6" *ngFor="let quiz of quizes">
+    <div class="card center mb-3">
+      <div class="card-body">
+        <h5 class="card-title">{{ quiz.name }}</h5>
+        <p class="card-text">{{ quiz.description }}</p>
+        <a routerLink="/quiz/{{quiz.id}}" class="btn btn-success">Comenzar quiz</a>
+      </div>
+    </div>
+  </div>
+</div>

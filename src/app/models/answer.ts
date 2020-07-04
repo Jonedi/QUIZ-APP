@@ -1,6 +1,7 @@
 export class Answer {
   id: number;
   questionId: number;
-  quizId: number;
+  name: string;
   isAnswer: boolean;
+  selected: boolean;
 }

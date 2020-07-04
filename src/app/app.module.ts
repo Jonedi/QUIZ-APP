@@ -1,27 +1,38 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AngularFireModule } from '@angular/fire';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { AngularFireStorageModule } from '@angular/fire/storage';
-import { AngularFireAuthModule } from '@angular/fire/auth';
-import { environment } from '../environments/environment';
+import { FormsModule } from '@angular/forms';
+import { QuizService } from './services/quiz.service';
+import { TimerService } from './services/timer.service';
+import { HttpClientModule } from '@angular/common/http';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AnswerListComponent } from './pages/answer-list/answer-list.component';
+import { QuizComponent } from './pages/quiz/quiz.component';
+import { QuizListComponent } from './pages/quiz-list/quiz-list.component';
+import { QuizResultComponent } from './pages/quiz-result/quiz-result.component';
+import { InicioComponent } from './pages/inicio/inicio.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    AnswerListComponent,
+    QuizComponent,
+    QuizListComponent,
+    QuizResultComponent,
+    InicioComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule,
-    AngularFireStorageModule,
-    AngularFireAuthModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    QuizService,
+    TimerService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
