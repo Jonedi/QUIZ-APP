@@ -1,0 +1,20 @@
+<div class="col-lg-8 mx-auto qu-result mt-5">
+  <div class="card border-success text-center mb-3">
+    <div class="card-header bg-transparent border-success"><h3>Resultado</h3></div>
+    <div class="card-body text-success">
+      <h4 class="card-title">Puntaje</h4>
+      <h5 class="card-title">{{ score }} de {{ totalQuestions }}</h5>
+      <p class="card-text"><strong>{{ (score / totalQuestions) * 100 }}%</strong></p>
+    </div>
+    <div class="card-body text-success">
+      <h4 class="card-title">Duración</h4>
+      <p class="card-text"><strong>{{ duration }}</strong></p>
+    </div>
+    <div class="card-footer bg-transparent border-success mx-auto py-4">
+      <!-- <a [routerLink]="['/quiz', quiz.id, 'answers']" class="btn btn-success">Verificar tus respuestas</a> -->
+        &nbsp;
+      <a (click)="deleteResults()" class="btn btn-primary text-white">Regresar al inicio</a>
+    </div>
+  </div>
+</div>
+

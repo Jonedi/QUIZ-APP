@@ -1,0 +1,133 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Kanit:600,600i,700,700i,800,800i,900,900i|Montserrat+Alternates:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+
+// Variables
+$dark-blue: #00000F;
+$golden: #CCA70A;
+$silver: #C0C0C0;
+$purple: #2A002B;
+$light-blue: #00AAFF;
+$orange: #F4CE2C;
+$black: #0C0C0C;
+$gray: #606060;
+// Fin Variables
+
+// General
+h1, h2, h3, h4, h5, h6 { font-family: 'Kanit';}
+a, span, input {font-family: 'Montserrat Alternates';}
+li, label, blockquote {font-family: 'Montserrat';}
+
+.bg-home {
+  height: 100%;
+  margin-bottom: 8vw;
+}
+
+.qz-title {
+  text-align: center;
+  text-transform: uppercase;
+  color: $light-blue;
+  padding-top: 2vw;
+}
+// Fin General
+
+// Navbar
+.qz-nav {
+  background-color: $dark-blue;
+}
+
+// Home
+.qz-home {
+  display: flex;
+  justify-content: center;
+  background: url(./assets/img/bg-home.png);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+
+  .row {
+    width: 100%;
+    text-align: center;
+
+
+    .card {
+      width: 70%;
+      margin: auto;
+      background-color: rgba(192, 192, 192, 0.6);
+    }
+
+    .card-body {
+
+      .card-title {
+        text-transform: uppercase;
+        color: $dark-blue
+      }
+
+      p.card-text {
+        font-size: 19px;
+        margin-bottom: 1vw;
+        color: $dark-blue;
+      }
+
+      h5.card-text {
+        margin-top: 8vw;
+        margin-bottom: 7vw;
+        font-size: 30px;
+        color: $gray;
+      }
+
+      .btn {
+        width: 70%;
+        margin: auto;
+        font-size: 25px;
+        font-weight: 700;
+        color: white;
+      }
+    }
+  }
+}
+// fin Home
+// Quiz
+.qu-quiz {
+  .qu-quizTitle {
+    letter-spacing: 2px;
+  }
+
+  .bg-blue-light {
+    background-color: $light-blue !important;
+  }
+
+  .card-text {
+    font-size: 20px;
+  }
+}
+// fin Quiz
+// Resultados
+.qu-result {}
+// fin Resultados
+// footer
+html {
+  min-height: 100%;
+  position: relative;
+
+  body {
+    margin: 0;
+    margin-bottom: 30px;
+  }
+
+  footer {
+    .footer {
+      background-color: $dark-blue;
+      color: $silver;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 80px;
+      display: flex !important;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+// fin Footer
