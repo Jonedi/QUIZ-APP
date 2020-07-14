@@ -16,4 +16,6 @@ En la carpeta **"Sopa de letras"**, puedes encontrar un script en Javascript, el
 - Con el puntero de mouse, selecciona una letra y arrastralo hasta completar la palabra completa. Si lo haces bien, la palabra se cambia de color azul y en el listado queda tachada la palabra encotrada.
 - Cuando termines el puzzle, el cuadro se volverá verde.
 
-Si quieres reiniciar el juego, haz clic en **reset**. y si quieres ver el puzzle resuelto, haz clic en **resolver**
+Si quieres reiniciar el juego, haz clic en **reset**. y si quieres ver el puzzle resuelto, haz clic en **resolver**.
+
+Agradecimientos a [Bill Bunkat](http://github.com/bunkat/wordfind) por la librería *wordfind* usada para esta app.
