@@ -22,7 +22,7 @@
   *
   * @api private
   */
-  var WordFindGame = function() {
+  var WordFindGame = () => {
 
     // List of words for this game
     var wordList;
@@ -33,7 +33,7 @@
     * @param {String} el: The jQuery element to write the puzzle to
     * @param {[[String]]} puzzle: The puzzle to draw
     */
-    var drawPuzzle = function (el, puzzle) {
+    var drawPuzzle = (el, puzzle) => {
       
       var output = '';
       // for each row in the puzzle

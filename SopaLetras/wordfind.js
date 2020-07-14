@@ -24,7 +24,7 @@
   *
   * @api private
   */
-  var WordFind = function () {
+  var WordFind = () => {
 
     // Letters used to fill blank spots in the puzzle
     var letters = 'abcdefghijklmnoprstuvwy';
@@ -91,7 +91,7 @@
     * @param {[String]} words: The list of words to fit into the puzzle
     * @param {[Options]} options: The options to use when filling the puzzle
     */
-    var fillPuzzle = function (words, options) {
+    var fillPuzzle = (words, options) => {
 
       var puzzle = [], i, j, len;
 
@@ -126,7 +126,7 @@
     * @param {[Options]} options: The options to use when filling the puzzle
     * @param {String} word: The word to fit into the puzzle.
     */
-    var placeWordInPuzzle = function (puzzle, options, word) {
+    var placeWordInPuzzle = (puzzle, options, word) => {
 
       // find all of the best locations where this word would fit
       var locations = findBestLocations(puzzle, options, word);
@@ -155,7 +155,7 @@
     * @param {[Options]} options: The options to use when filling the puzzle
     * @param {String} word: The word to fit into the puzzle.
     */
-    var findBestLocations = function (puzzle, options, word) {
+    var findBestLocations = (puzzle, options, word) => {
 
       var locations = [],
           height = options.height,
@@ -225,7 +225,7 @@
     * @param {int} y: The y position to check
     * @param {function} fnGetSquare: Function that returns the next square
     */
-    var calcOverlap = function (word, puzzle, x, y, fnGetSquare) {
+    var calcOverlap = (word, puzzle, x, y, fnGetSquare) => {
       var overlap = 0;
 
       // traverse the squares to determine if the word fits
@@ -261,7 +261,7 @@
     * @param {[Location]} locations: The set of locations to prune
     * @param {int} overlap: The required level of overlap
     */
-    var pruneLocations = function (locations, overlap) {
+    var pruneLocations = (locations, overlap) => {
 
       var pruned = [];
       for(var i = 0, len = locations.length; i < len; i++) {
