@@ -1,3 +1,9 @@
+/* Sopa de Letras en JS
+* (c) 2020, Jon Tmarz, versión 1.0
+* Juego de sopa de letras facil e intuitivo
+* https://github.com/Jonedi/QUIZ-APP/tree/dev/SopaLetras
+*/
+
 var texto = [], txtPal, lstPal;
 
 const init = () => {
@@ -5,11 +11,6 @@ const init = () => {
   lstPal = document.getElementById('lstPalabras');
   solve = document.getElementById('solve');
   txtPal.addEventListener("keypress", enter);
-}
-
-const enter = (evt) => {
-  if(evt.keyCode==13)
-      addWord();
 }
 
 const capturar = () => {
