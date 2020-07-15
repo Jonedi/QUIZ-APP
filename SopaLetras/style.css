@@ -96,3 +96,7 @@ button::-moz-focus-inner {
 #solve {
   margin: 0 30px;
 }
+
+#lstPalabras {
+  height: 300px;
+}
